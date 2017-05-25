@@ -1,10 +1,10 @@
 package com.base7.jd.kotlindemo
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val btnCalculate: Button = findViewById(R.id.btnCalculate) as Button
 
         btnCalculate.setOnClickListener {
-            if (txtNum1.text != null && txtNum2.text != null) {
+            /*if (txtNum1.text != null && txtNum2.text != null) {
                 str1 = txtNum1.text.toString()
                 num1 = Integer.parseInt(str1)
 
@@ -32,7 +32,9 @@ class MainActivity : AppCompatActivity() {
                 num2 = Integer.parseInt(str2)
             }
 
-            Toast.makeText(this, "$num1 + $num2 = ${check(num1, num2)}", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "$num1 + $num2 = ${check(num1, num2)}", Toast.LENGTH_LONG).show()*/
+
+            startActivity(Intent(this, ViewPagerActivity::class.java))
         }
 
     }
